@@ -2,6 +2,7 @@ const Product = require('../models/productModel');
 const asyncHandler = require('express-async-handler');
 const slugify = require('slugify');
 
+
 const createProduct = asyncHandler(async(req,res)=>{
     try {
         if(req.body.title){
@@ -101,5 +102,7 @@ const getallProducts = asyncHandler(async(req,res)=>{
         throw new Error(error)
     }
 })
+
+
 
 module.exports = {createProduct,getaProduct,getallProducts,updateProduct,deleteProduct};
